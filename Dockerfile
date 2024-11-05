@@ -1,0 +1,17 @@
+FROM openjdk:17-jdk
+
+WORKDIR /app
+
+ENV SPRING_DATASOURCE_DRIVER_CLASS_NAME="org.postgresql.Driver"
+ENV SPRING_DATASOURCE_URL="jdbc:postgresql://postgres:5432/bazaar"
+ENV SPRING_DATASOURCE_USERNAME="admin"
+ENV SPRING_DATASOURCE_PASSWORD="12419"
+ENV SPRING_JPA_HIBERNATE_DDL_AUTO="update"
+ENV SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT="org.hibernate.dialect.PostgreSQLDialect"
+ENV SPRING_DATA_REST_BASE_PATH="/api"
+
+ADD target/Inobazaar-0.0.1-SNAPSHOT.jar Inobazaar-0.0.1-SNAPSHOT.jar
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "Inobazaar-0.0.1-SNAPSHOT.jar"]

@@ -1,0 +1,34 @@
+package com.Ino.Inobazaar.product.web.dto;
+
+
+import com.Ino.Inobazaar.base.web.dto.BaseDTO;
+
+public class ProductDetailsDTO extends BaseDTO {
+    private String value;
+    private Long productId;
+    private Long categoryDetailsId;
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(final Long productId) {
+        this.productId = productId;
+    }
+
+    public Long getCategoryDetailsId() {
+        return categoryDetailsId;
+    }
+
+    public void setCategoryDetailsId(final Long categoryDetailsId) {
+        this.categoryDetailsId = categoryDetailsId;
+    }
+}
